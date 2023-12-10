@@ -1,0 +1,72 @@
+<section class="container">
+  <div class="tools-area">
+    <span class="p-input-icon-left">
+      <i class="pi pi-search"></i>
+      <input
+        type="text"
+        pInputText
+        class="search-input"
+        [(ngModel)]="searchTerm"
+        placeholder="Search for a country..."
+        (input)="filterData()"
+      />
+    </span>
+
+    <p-dropdown
+      [options]="regionList"
+      [(ngModel)]="selectedRegion"
+      optionLabel="region"
+      [showClear]="true"
+      placeholder="Filter by Region"
+      styleClass="h-3rem"
+      (ngModelChange)="filterData()"
+      appendTo="body"
+    ></p-dropdown>
+  </div>
+
+  <div class="list-container">
+    <p-card
+      styleClass="list-card"
+      *ngFor="let country of listCountry"
+      header="{{ country.name }} ({{ country.short }})"
+    >
+      <ng-template pTemplate="header">
+        <img alt="Card" src="{{ country.flag }}" class="flag-size" />
+      </ng-template>
+      <ng-template pTemplate="content">
+        <div class="details">
+          <div class="flex align-items-center justify-content-flex-start gap-1">
+            <span class="details-title">Population: </span>
+            <p class="details-value">{{ country.population }}</p>
+          </div>
+          <div class="flex align-items-center justify-content-flex-start gap-1">
+            <span class="details-title">Region: </span>
+            <p class="details-value">{{ country.region }}</p>
+          </div>
+          <div class="flex align-items-center justify-content-flex-start gap-1">
+            <span class="details-title">Capital: </span>
+            <p class="details-value">{{ country.capital }}</p>
+          </div>
+          <div class="flex align-items-center justify-content-flex-start gap-1">
+            <span class="details-title">Zip Code: </span>
+            <p class="details-value">{{ country.zip_code }}</p>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template pTemplate="footer">
+        <p-button
+          label="Details"
+          icon="pi pi-eye"
+          (click)="viewDetails(country)"
+        ></p-button>
+        <p-button
+          label="Map"
+          icon="pi pi-map-marker"
+          styleClass="p-button-secondary"
+          [style]="{ 'margin-left': '.5em' }"
+          (click)="viewMap(country)"
+        ></p-button>
+      </ng-template>
+    </p-card>
+  </div>
+</section>

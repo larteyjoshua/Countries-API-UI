@@ -1,0 +1,20 @@
+<div class="back-button" >
+    <app-back></app-back>
+</div>
+<div class="map-container">
+<p-card>
+    <div class="detail-info">
+        <img src="{{country.flag}}" class="flag-map" />
+        <span class="details-text">{{country.name}}</span>
+        <span class="details-text">{{country.capital}}</span>
+        <span class="details-text">{{country.population}}</span>
+        <span class="details-text">{{country.region}}</span>
+        <span class="details-text">{{country.sub_region}}</span>
+        <span class="details-text">{{country.location[0]}}</span>
+        <span class="details-text">{{country.location[1]}}</span>
+    </div>
+</p-card>
+<div class="map-area">
+    <div id="map"></div>
+</div>
+</div>

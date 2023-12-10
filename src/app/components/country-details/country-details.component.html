@@ -1,0 +1,61 @@
+<div class="back-button" >
+    <app-back></app-back>
+</div>
+<div class="country-detail-container">
+<p-card>
+    <div class="detail-country">
+        <img src="{{country.flag}}" class="detail-flag">
+        <div class="detail-params">
+            <h2>{{country.name}}</h2>
+            <div  class="detail-divider">
+            <div class="divider" >
+                <div class="border-value">
+                <span class="details-title">Native Name: </span>
+                <p class="details-value">{{ country.nativeName[0].official}}</p>
+              </div>
+              <div class="border-value">
+                <span class="details-title">Population: </span>
+                <p class="details-value">{{ country.population }}</p>
+              </div>
+              <div class="border-value">
+                <span class="details-title">Region: </span>
+                <p class="details-value">{{ country.region }}</p>
+              </div>
+              <div class="border-value">
+                <span class="details-title">Sub Region: </span>
+                <p class="details-value">{{ country.sub_region }}</p>
+              </div>
+              <div class="border-value">
+                <span class="details-title">Capital: </span>
+                <p class="details-value">{{ country.capital }}</p>
+              </div>
+              </div>
+            
+              <div  class="divider">
+                <div class="border-value">
+                    <span class="details-title">Top Level Domain: </span>
+                    <p class="details-value">{{ country.tld[0] }}</p>
+                  </div>
+                  <div class="border-value">
+                    <span class="details-title">Currencies: </span>
+                    <p class="details-value">{{ country.currencies[0].name }}</p>
+                  </div>
+                  <div class="border-value">
+                    <span class="details-title">Languages: </span>
+                    <div class="details-value" *ngFor="let lang of country.languages">{{ lang }}</div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="border-value">
+                <span class="details-title">Border Countries:</span>
+                <div class="details-value" *ngFor="let border of country.borders" (click)="goToCountry(border)"> <p-chip>{{ getCountryName(border) }}</p-chip></div>
+              </div>
+            
+        </div>
+
+    </div>
+
+</p-card>
+
+</div>

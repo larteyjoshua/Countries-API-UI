@@ -1,0 +1,92 @@
+::ng-deep {
+  .map-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 5px;
+  }
+
+  .detail-info {
+    width: 1200px;
+    max-width: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+  }
+  .flag-map {
+    width: 90px;
+    height: 50px;
+  }
+  .details-text {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  #map {
+    height: 100%;
+  }
+
+  .map-area {
+    width: 1250px;
+    max-width: auto;
+    border: 2px solid white;
+    height:700px;
+  }
+
+  
+  @media (max-width: 575.98px) {
+    .back-button {
+      padding-left: 20px;
+    }
+    
+  .detail-info {
+    width: 300px;
+    flex-wrap: wrap;
+
+  }
+  .map-area {
+    width: 360px;
+    height:500px;
+  }
+
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .detail-info {
+      width: 300px;
+      flex-wrap: wrap;
+  
+    }
+    .map-area {
+      width: 360px;
+      height:500px;
+    }
+    .back-button {
+      padding-left: 20px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .detail-info {
+      width: auto;
+      flex-wrap: wrap;
+  
+    }
+    .map-area {
+      width: 720px;
+      height:500px;
+    }
+    .back-button {
+      padding-left: 20px;
+    }
+
+  }
+
+  @media (min-width: 1200px) {
+    .back-button {
+      padding-left: 20px;
+    }
+  }
+}

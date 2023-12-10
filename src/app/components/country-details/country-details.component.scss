@@ -1,0 +1,138 @@
+::ng-deep {
+  .country-detail-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 5px;
+  }
+
+  .detail-country {
+    width: 1200px;
+    max-width: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: auto;
+    gap: 60px;
+  }
+  .detail-flag {
+    width: 500px;
+    height: 350px;
+  }
+  .details-text {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .back-button {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    padding-left: 340px;
+  }
+
+  .details-title {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .details-value {
+    font-size: 16px;
+  }
+  .detail-params {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: columns;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .detail-divider {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+  }
+  .divider {
+    line-height: 10px;
+  }
+  .p-chip {
+    border-radius: unset;
+  }
+  .border-value {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: columns;
+    gap: 0.25rem !important;
+  }
+
+  @media (max-width: 575.98px) {
+    .back-button {
+      display: flex;
+      justify-content: flex-start;
+      padding: 10px;
+      padding-left: 20px;
+    }
+
+    .detail-country {
+      width: auto;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .detail-flag {
+      width: 340px;
+      height: 350px;
+    }
+
+    .detail-divider {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .detail-params {
+      padding: 10px;
+    }
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .detail-divider {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .detail-country {
+      width: auto;
+      height: auto;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .detail-divider {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .detail-country {
+      width: auto;
+      height: auto;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .back-button {
+      display: flex;
+      justify-content: flex-start;
+      padding: 10px;
+      padding-left: 20px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .back-button {
+      padding-left: 20px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+::ng-deep {
+    .title {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .p-togglebutton.p-button  {
+        background: #efefef;
+        color: #000;
+        border: none;
+      }
+     
+
+    .p-togglebutton.p-button .p-button-icon-left, .p-togglebutton.p-button .p-button-icon-right {
+        color: #000;
+    }
+   
+}
